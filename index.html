@@ -149,13 +149,17 @@ title: Home
                 <h2 class="text-3xl font-bold text-gray-900 mb-2 font-display">Featured Courses</h2>
                 <p class="text-gray-500 text-sm">Dive into our most popular security modules.</p>
             </div>
+            {% assign total_courses = site.courses | size %}
+            {% if total_courses > 0 %}
             <a href="{{ '/courses/' | relative_url }}" class="hidden md:flex items-center gap-2 text-xs font-bold text-bltRed uppercase tracking-widest hover:text-bltRedHover transition-all">
                 View all courses <i class="ph-bold ph-arrow-right"></i>
             </a>
+            {% endif %}
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {% assign featured = site.courses | where: "featured", true | limit: 3 %}
+        {% if featured.size > 0 %}
         {% for course in featured %}
             <a href="{{ course.url | relative_url }}" class="group bg-white rounded-3xl shadow-soft hover:shadow-float border border-gray-100 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1">
                 <div class="h-48 bg-gray-900 relative overflow-hidden">
@@ -178,6 +182,15 @@ title: Home
                 </div>
             </a>
         {% endfor %}
+        {% else %}
+        <div class="col-span-3 text-center py-16">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="ph-bold ph-books text-3xl text-gray-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">No Featured Courses Yet</h3>
+            <p class="text-gray-500 text-sm max-w-md mx-auto">We're currently populating our course catalog. Check back soon for exciting cybersecurity courses!</p>
+        </div>
+        {% endif %}
         </div>
     </div>
 </section>
