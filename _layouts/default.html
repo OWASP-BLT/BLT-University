@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title | default: "BLT University" }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
-    
+
     {% seo %}
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,18 +38,23 @@
                         float: '0 30px 60px -15px rgba(0,0,0,0.08)'
                     }
                 }
-            }
+            },
+            safelist: [
+                'max-h-[500px]',
+                'opacity-100'
+            ]
         }
         </script>
 </head>
 <body class="bg-[#fafafa] dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased selection:bg-bltRed selection:text-white flex flex-col min-h-screen">
     
     {% include header.html %}
-    
+
     {{ content }}
-    
+
     {% include footer.html %}
-    
+
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
+
 </html>

@@ -12,6 +12,61 @@
             </span>
         </a>
 
+        <!-- Navigation (Desktop) -->
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+            {% for item in site.navigation %}
+            <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}
+                          text-bltRed border-b-2 border-bltRed pb-1
+                          {% else %}
+                          hover:text-gray-900 transition-colors
+                          {% endif %}">
+                {{ item.title }}
+            </a>
+            {% endfor %}
+        </nav>
+
+        
+        <div class=" flex items-center gap-2 ">
+             <!-- Theme Toggle -->
+            <button id="theme-toggle" 
+                    aria-label="Toggle Dark Mode"
+                    class="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">
+                <i id="theme-icon" class="fas fa-sun hidden dark:block"></i>
+                <i id="theme-icon-dark" class="fas fa-moon block dark:hidden"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" type="button"
+                class="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-bltRed/20 rounded-md transition-all duration-200"
+                aria-label="Toggle navigation"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        
+        </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-hidden transition-all duration-300 ease-in-out opacity-0 max-h-0">
+        <nav class="flex flex-col gap-1 p-4 text-sm font-medium text-gray-600">
+            {% for item in site.navigation %}
+            <a href="{{ item.url | relative_url }}" class="px-4 py-3 rounded-lg transition-all duration-200 {% if page.url == item.url %}
+                          bg-bltRedLight text-bltRed font-semibold
+                          {% else %}
+                          hover:bg-gray-50 hover:text-gray-900
+                          {% endif %}">
+                {{ item.title }}
+            </a>
+            {% endfor %}
+        </nav>
         <nav class="hidden items-center gap-8 md:flex">
             {% for item in site.navigation %}
                 <a href="{{ item.url | relative_url }}"
@@ -24,14 +79,6 @@
             {% endfor %}
         </nav>
 
-        <div class="flex items-center gap-4">
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" 
-                    aria-label="Toggle Dark Mode"
-                    class="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white">
-                <i id="theme-icon" class="fas fa-sun hidden dark:block"></i>
-                <i id="theme-icon-dark" class="fas fa-moon block dark:hidden"></i>
-            </button>
-        </div>
+       
     </div>
 </header>
