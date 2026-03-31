@@ -36,10 +36,10 @@ Help make our courses better!
 
 **Process:**
 1. Fork the repository
-2. Create a branch: `git checkout -b improve-course-name`
+2. Create a branch: `git checkout -b fix/course-name-typo`
 3. Make your changes
 4. Commit: `git commit -m "Improve explanation of XSS in web-security course"`
-5. Push: `git push origin improve-course-name`
+5. Push: `git push origin fix/course-name-typo`
 6. Open a pull request
 
 ### 3. Report Issues
@@ -91,6 +91,8 @@ Your biography goes here. Include:
 
 Use Markdown for formatting.
 ```
+
+> **Tip:** Check out existing instructor profiles in `_instructors/` (e.g., `sarah-chen.md`, `marcus-rodriguez.md`) for real examples to follow.
 
 ### Course Structure
 
@@ -157,6 +159,8 @@ Describe labs...
 Describe assessments...
 ```
 
+> **Tip:** See existing courses in `_courses/` (e.g., `web-security-intro.md`, `advanced-pentesting.md`) for real examples of how to structure your course content.
+
 ### Content Guidelines
 
 **Writing Style:**
@@ -170,7 +174,7 @@ Describe assessments...
 - Always emphasize ethical use
 - Include legal considerations
 - Provide safe lab environments
-- Warning about dangerous techniques
+- Warn about dangerous techniques
 - Explain defensive measures
 
 **Accessibility:**
@@ -252,6 +256,8 @@ git push origin feature/your-feature
 - [ ] Verify responsive design
 - [ ] Spell-check content
 - [ ] Follow existing code style
+- [ ] Validate HTML output
+- [ ] Verify accessibility (alt text, color contrast, screen reader compatibility)
 - [ ] Update documentation if needed
 
 ### PR Description
@@ -265,7 +271,7 @@ Provide:
 
 ### Review Process
 
-1. **Automated Checks**: GitHub Actions will run tests
+1. **Automated Checks**: GitHub Actions will build and verify the site
 2. **Peer Review**: Community members review your PR
 3. **Revisions**: Address feedback and make changes
 4. **Approval**: Maintainers approve and merge
@@ -371,7 +377,7 @@ Report issues to conduct@bltuniversity.org
 
 By contributing, you agree:
 
-- Your contributions will be licensed under AGPL-3.0
+- Your contributions will be licensed under [AGPL-3.0](LICENSE)
 - You have rights to contribute the content
 - Your contributions are original or properly attributed
 - You understand the license implications
