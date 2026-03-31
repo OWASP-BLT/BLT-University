@@ -75,7 +75,7 @@ Create `_instructors/your-name.md`:
 layout: instructor
 title: Your Name
 expertise: Your Specialization
-avatar: /assets/images/instructors/yourname.jpg
+avatar: /assets/images/instructors/your-name.jpg
 github: yourusername
 linkedin: yourprofile
 twitter: yourhandle
@@ -203,9 +203,9 @@ assets/
 
 ### Prerequisites
 
-- Ruby 3.0+
-- Bundler
-- Git
+- Ruby 3.0+ (recommended: 3.2.x)
+- Bundler 2.0+
+- Git 2.x+
 
 ### Local Setup
 
@@ -290,10 +290,8 @@ Provide:
 
 `inline code`
 
-```python
-# Code block
-print("Hello, Security!")
-```
+    # Code block
+    print("Hello, Security!")
 
 > Blockquote for important notes
 ```
