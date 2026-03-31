@@ -9,7 +9,7 @@ Thank you for your interest in contributing to BLT University! This document pro
 Share your cybersecurity expertise by creating a course!
 
 **Steps:**
-1. Submit a [course proposal](https://github.com/OWASP-BLT/BLT-University/issues/new?template=course-submission.yml)
+1. Submit a course proposal using the [course proposal template](https://github.com/OWASP-BLT/BLT-University/issues/new?template=course-proposal.md)
 2. Wait for approval and feedback from the curriculum team
 3. Create your instructor profile in `_instructors/`
 4. Develop your course content in `_courses/`
@@ -220,7 +220,7 @@ bundle install
 # Run locally
 bundle exec jekyll serve --livereload
 
-# Visit http://localhost:4000/BLT-University/
+# Visit http://localhost:4000/
 ```
 
 ### Making Changes
@@ -336,7 +336,7 @@ print("Hello, Security!")
 
 If you find security issues:
 1. **Do NOT** open a public issue
-2. Email security@bltuniversity.org
+2. Email security@owasp.org
 3. Provide details and POC
 4. Wait for response before disclosure
 
@@ -365,7 +365,7 @@ Violations will result in:
 2. Temporary ban
 3. Permanent ban (severe cases)
 
-Report issues to conduct@bltuniversity.org
+Report issues to conduct@owasp.org
 
 ## 📜 Licensing
 
@@ -393,7 +393,7 @@ Need assistance?
 - **Questions**: [GitHub Discussions](https://github.com/OWASP-BLT/BLT-University/discussions)
 - **Bugs**: [Issue Tracker](https://github.com/OWASP-BLT/BLT-University/issues)
 - **Chat**: Join our community chat
-- **Email**: contribute@bltuniversity.org
+- **Email**: contribute@owasp.org
 
 ## 🙏 Thank You!
 
